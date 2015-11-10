@@ -1,0 +1,74 @@
+<template name="activityShow">
+<main data-reactid=".1.1">
+    <div class="blank">
+        <div>
+            <div class="postImgBox">
+                <img alt="image" class="postImage" src="{{file.url}}">
+            </div>
+            <div class="sPostUserBox">
+                <img src="{{file.url}}" class="sPostUserphoto">
+                <div class="sPostUserInfo">
+                    <p class="actUserName nm">{{where}}</p>
+                    <p class="actUserLabel nm">{{formatdatetime time}}日</p>
+                </div>
+            </div>
+            <div class="sPostACon">
+                    <h1 class="sActConT">{{title}}</h1>
+                    <div class="sPostAConText">
+                        <div class="sPostAConTextCon">
+                            <span> </span>
+                            <div><div>
+                                <p>
+                                    <span style="line-height: 19.25px; widows: 1;">{{desc}}</span>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="sActList" style="padding-left: 0px;">
+                <li>
+                    <span class="sActListIcon glyphicon glyphicon-calendar"></span>
+                    <span>时间：</span>
+                    <span>{{formatdatetime time}}</span>
+                </li>
+                <li>
+                    <span class="sActListIcon glyphicon glyphicon-calendar"></span>
+                    <span>发起时间：</span>
+                    <span>{{formatdatetime createdAt}}</span>
+                </li>
+                <li>
+                    <span class="sActListIcon glyphicon glyphicon-calendar"></span>
+                    <span>更新时间：</span>
+                    <span>{{formatdatetime updatedAt}}</span>
+                </li>
+                <li>
+                    <!-- <img src="/icons/seat@2x.png" class="sActListIcon"> -->
+                    <span class="sActListIcon glyphicon glyphicon-globe"></span>
+                    <span>报名信息：</span>
+                    <span>{{limit}}</span>
+                </li>
+                <li>
+                    <!-- <img src="/icons/ticket@2x.png" class="sActListIcon"> -->
+                    <span class="sActListIcon glyphicon glyphicon-usd"></span>
+                    <span>发起组织/个人：</span>
+                    <span>{{fee}}</span>
+                </li>
+                <li>
+                    <!-- <img src="/icons/map@2x.png" class="sActListIcon"> -->
+                    <span class="sActListIcon glyphicon glyphicon-map-marker"></span>
+                    <span>地点：</span>
+                    <span>{{where}}</span>
+                </li>
+                <li style="padding-left: 10px;">
+                    <a class="btn btn-sm btn-default" href="{{pathFor 'activitiesIndex'}}" role="button">返回</a>
+                    <a class="btn btn-sm btn-default" href="{{pathFor 'activityEdit'}}" role="button" style="margin-right: 10px; margin-left: 10px;">编辑</a>
+                    <a class="btn btn-sm btn-danger delete-activitie" href="#" role="button">删除</a>
+                </li>
+            </ul>
+            <!-- <br><button class="sActBtnOver" disabled="">报名正在进行中</button> -->
+        </div>
+    </div>
+</main>
+</template>

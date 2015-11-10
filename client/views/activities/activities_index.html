@@ -1,0 +1,51 @@
+<template name="activitiesIndex">
+<!--         <div class="well well-sm" style="margin-bottom: 0px; height: 60px;">
+            <h3 class="title" style="margin-top: 10px;">活动列表
+                <a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-right" style="font-size: 13px;">
+                    <span class="glyphicon glyphicon-plus"></span> 发起活动
+                </a>
+            </h3>
+        </div> -->
+        {{#each activities}}
+        <div>
+            <a href="{{pathFor 'activityShow'}}">
+                <div class="darenPostList" id="3ggmM69ggaDo5wB8r">
+                    <div class="postImgBox">
+                        <div class="postImg">
+                            <img alt="image" class="postImage" src="{{file.url}}">
+                            <div class="postInfo">
+                                <h1 class="postTitle">
+                                    <div class="postTitleBor">
+                                        <span>{{title}}</span>
+                                        <span></span>
+                                        <br>
+                                        <span>{{limit}}</span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                <div class="actUserInfo">
+                    <img class="actUserPhoto" src="{{file.url}}"/>
+                    <p class="actUserNameBox" style="padding-top: 5px;">
+                        <span class="actUserName">{{where}}</span>
+                        <span class="actUserLabel">{{formatdatetime time}}</span>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="darenActShadow"></div>
+        </a>
+        </div>
+        {{else}}
+        <!-- 小气鬼,喝凉水,喝了凉水变魔鬼! -->
+          <div class="well well-sm" style="margin-bottom: 0px; height: 60px;">
+            <a href="{{pathFor 'activityNew'}}" class="btn btn-sm btn-primary pull-left" style="font-size: 13px;">
+                <span class="glyphicon glyphicon-plus"></span> 发起活动
+            </a>
+          </div>
+        {{/each}}
+        <!-- <div class="well well-sm"><a href="#" class="btn btn-sm btn-primary" style="margin-top: 5px; font-size: 13px;">Show more</a></div> -->
+</template>

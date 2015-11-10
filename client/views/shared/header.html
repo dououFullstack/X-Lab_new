@@ -1,0 +1,28 @@
+<template name="header"  style="border-color: #81358c;">
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'frontpage'}}">Tsinghua x-lab平台</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{{pathFor 'activitiesIndex'}}">Activities</a></li>
+          {{#if navHas "Activities"}}
+            <li><a href="{{pathFor 'activitiesIndex'}}">活动中心</a></li>
+          {{/if}}
+        </ul>
+  
+      <!-- <div class="navbar-collapse collapse"> -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://www.x-lab.tsinghua.edu.cn/about.html#xlabjj" target="_blank">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
