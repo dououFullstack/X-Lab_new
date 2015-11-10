@@ -4,15 +4,15 @@
     {{#autoForm collection="Activities" id="activityForm" type="insert"}}
     <fieldset>
         {{> afQuickField name='title'}}
-        {{> afQuickField name='desc' rows=6}}
-        <!-- {{> afQuickField name='content'}} -->
+        <!-- {{> afQuickField name='desc' rows=6}} -->
+        {{> afQuickField name='content'}}
         {{> afQuickField name="picture"}}
         {{> afQuickField name='time'}}
         {{> afQuickField name='where'}}
-        <!-- {{> afQuickField name='contact'}} -->
+        {{> afQuickField name='contact'}}
         {{> afQuickField name='limit'}}
-        {{> afQuickField name='fee'}}
-        <!-- {{> afQuickField name='registration'}} -->
+        <!-- {{> afQuickField name='fee'}} -->
+        {{> afQuickField name='registration'}}
         <!-- {{> afQuickField name='createdAt'}} -->
     </fieldset>
     <button type="submit" class="btn btn-primary">提交</button>
