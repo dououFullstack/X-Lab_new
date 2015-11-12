@@ -1,5 +1,5 @@
 <template name="activityShow">
-<main data-reactid=".1.1">
+<main>
     <div class="blank">
         <div>
             <div class="postImgBox">
@@ -22,11 +22,31 @@
                                     <span style="line-height: 19.25px; widows: 1;">{{desc}}</span>
                                     <br>
                                 </p>
+                                 <p>{{{content}}}</p><br>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="" style="margin: 50px; background-color: #ccc;">
+                <p>
+                    <hr>
+                    ----------------------报名模块区---------------------
+                    <hr>
+                </p>
+            </div>
+            <hr><br><br><br><hr>
+<!--    <ul class="comments">
+                {{#each comments}}
+                    {{> commentItem}}
+                {{/each}}
+            </ul> -->
+            {{#if currentUser}}
+                {{> commentSubmit}}
+            {{else}}
+            <p>Please log in to leave a comment.</p>
+            {{/if}}
+
             <ul class="sActList" style="padding-left: 0px;">
                 <li>
                     <span class="sActListIcon glyphicon glyphicon-calendar"></span>

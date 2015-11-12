@@ -3,11 +3,17 @@ Template.activitiesIndex.rendered = function() {
 
 Template.activitiesIndex.helpers({
   file: function () {
-    console.log(this);
+    //console.log(this);
     var id = this.picture;
-    console.log('id:', id);
+    //console.log('id:', id);
     return Images.findOne({_id: id});
   },
+  commentsCount: function() {
+    //   console.log("this :", this);
+    //   console.log("this._id :", this._id);
+      console.log("Comments :",Comments.find({activityId: this._id}).fetch());
+    return Comments.find({activityId: this._id}).count();
+},
 });
 
 Template.activitiesIndex.events ({

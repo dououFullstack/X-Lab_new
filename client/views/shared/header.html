@@ -17,11 +17,17 @@
             <li><a href="{{pathFor 'activitiesIndex'}}">活动中心</a></li>
           {{/if}}
         </ul>
-  
+
       <!-- <div class="navbar-collapse collapse"> -->
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
           <li><a href="http://www.x-lab.tsinghua.edu.cn/about.html#xlabjj" target="_blank">About</a></li>
         </ul>
+        <!-- 登录 -->
+        <div class="collapse navbar-collapse navbar-right" id="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </ul>
+      </div>
       </div>
     </div>
   </div>

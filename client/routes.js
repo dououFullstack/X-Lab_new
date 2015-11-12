@@ -8,7 +8,7 @@ Router.configure({
     'header': { to: 'header' },
     'footer': { to: 'footer' },
     // 'activitiesIndex': { to: 'activitiesIndex'}
-  }
+}
 });
 
 Router.map(function() {
@@ -22,6 +22,8 @@ Router.map(function() {
     path: '/activities',
     waitOn: function () {
       Meteor.subscribe('images');
+      Meteor.subscribe('Allcomments');
+    //   Meteor.subscribe('comments', this.params._id);
       return Meteor.subscribe('activities');
     },
     data: {
@@ -48,7 +50,11 @@ Router.map(function() {
     path: '/activities/:_id',
     waitOn: function () {
       Meteor.subscribe('images');
-      return Meteor.subscribe('activity', this.params._id);
+      Meteor.subscribe('comments');
+      return [
+          Meteor.subscribe('activity', this.params._id),
+          Meteor.subscribe('comments', this.params._id),
+      ];
     },
     data: function () {
       return Activities.findOne(this.params._id);

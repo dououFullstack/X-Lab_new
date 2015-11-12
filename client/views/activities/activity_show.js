@@ -3,11 +3,14 @@ Template.activityShow.rendered = function() {
 
 Template.activityShow.helpers({
   file: function () {
-    console.log(this);
+    // console.log(this);
     var id = this.picture;
-    console.log('id:', id);
+    // console.log('id:', id);
     return Images.findOne({_id: id});
   },
+  comments: function() {
+    return Comments.find({activityId: this._id});
+  }
 });
 
 Template.activityShow.events ({
